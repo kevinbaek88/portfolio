@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills - My Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">My Portfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+            <li class="nav-item"><a class="nav-link active" href="skills.html">Skills</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>       
+  </header>
+
+  <!-- Skills Section with Background Image -->
+  <main>
+    <section id="skills" class="py-5" style="background: url('images/Skills_Section.jpg') no-repeat center center/cover;">
+      <div class="container text-center text-white">
+        <h1 class="display-3 mb-5">My Skills</h1>
+        <div class="row">
+          <!-- Skill 1: HTML -->
+          <div class="col-md-4 mb-4">
+            <div class="card border-light">
+              <div class="card-body text-center">
+                <div class="circle" data-value="90%">
+                  <p>90%</p>
+                </div>
+                <h5 class="card-title mt-3">HTML</h5>
+                <p class="card-text">Building structured web content.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Skill 2: CSS -->
+          <div class="col-md-4 mb-4">
+            <div class="card border-light">
+              <div class="card-body text-center">
+                <div class="circle" data-value="80%">
+                  <p>80%</p>
+                </div>
+                <h5 class="card-title mt-3">CSS</h5>
+                <p class="card-text">Designing and styling web pages.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Skill 3: JavaScript -->
+          <div class="col-md-4 mb-4">
+            <div class="card border-light">
+              <div class="card-body text-center">
+                <div class="circle" data-value="75%">
+                  <p>75%</p>
+                </div>
+                <h5 class="card-title mt-3">JavaScript</h5>
+                <p class="card-text">Adding interactivity to web pages.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>

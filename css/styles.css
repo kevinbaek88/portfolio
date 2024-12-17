@@ -1,0 +1,477 @@
+/* Root Variables for Light and Dark Mode */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --primary-color: #333333;
+  --link-color: #007bff;
+  --input-bg: #f8f9fa;
+  --input-border: #ced4da;
+}
+
+/* Global Styles */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* Ensure full viewport height */
+}
+
+main {
+  flex: 1;
+  /* Push footer to the bottom when content is short */
+  padding: 20px;
+}
+
+/* Header */
+header {
+  background-color: var(--primary-color);
+  padding: 10px 0;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: var(--bg-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: var(--link-color);
+}
+
+/* Dark Mode Toggle within Navbar */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background: var(--primary-color);
+  color: var(--bg-color);
+  margin-top: auto;
+  /* Ensure footer stays at the bottom */
+}
+
+/* Intro Section */
+#intro {
+  text-align: center;
+  margin: 30px auto;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+/* Skills Page */
+#skills {
+  margin: 30px auto;
+  text-align: center;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.skills-category {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid var(--input-border);
+  border-radius: 10px;
+  background: var(--input-bg);
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-category:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.skills-category h2 {
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+
+.skills-category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills-category ul li {
+  margin: 10px 0;
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+/* Contact Page */
+#contact {
+  margin: 30px auto;
+  text-align: center;
+  max-width: 600px;
+}
+
+#contact p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+form {
+  margin-top: 10px;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--input-border);
+  border-radius: 5px;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--text-color);
+  color: var(--primary-color);
+  transform: scale(1.05);
+}
+
+/* Social Links */
+#social-links {
+  margin-top: 30px;
+}
+
+#social-links h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+#social-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+#social-links ul li {
+  margin: 10px 0;
+}
+
+#social-links ul li a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+#social-links ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Scroll-to-Top Button */
+#scroll-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+#scroll-to-top:hover {
+  background-color: var(--text-color);
+}
+
+/* Carousel */
+.carousel {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--primary-color);
+  color: var(--bg-color);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.carousel-control:hover {
+  opacity: 1;
+}
+
+/* Progress Bar Container */
+.progress {
+  background-color: #f1f1f1;
+  /* Light background for the progress bar container */
+  border-radius: 10px;
+  /* Rounded corners */
+  overflow: hidden;
+  /* Ensures progress stays within container */
+  height: 20px;
+  /* Height of the progress bar */
+  margin: 10px 0;
+  /* Add spacing between bars */
+}
+
+/* Progress Bar */
+.progress-bar {
+  background-color: #007bff;
+  /* Primary color for the progress bar */
+  height: 100%;
+  /* Full height */
+  line-height: 20px;
+  /* Centers text vertically */
+  color: white;
+  /* White text color */
+  text-align: center;
+  /* Centers text horizontally */
+  font-weight: bold;
+  /* Bold text */
+  transition: width 0.5s ease;
+  /* Smooth animation when width changes */
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.circle-skill {
+  text-align: center;
+}
+
+/* Skill Circles */
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 150px;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+  position: relative;
+  background: conic-gradient(#4db8ff 0% 0%, #ddd 0% 100%);
+  transition: background 1s ease;
+}
+
+/* Circle Content */
+.circle p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+}
+
+/* For each circle's percentage */
+.circle[data-value="90%"] {
+  background: conic-gradient(#4db8ff 0% 90%, #ddd 90% 100%);
+}
+
+.circle[data-value="80%"] {
+  background: conic-gradient(#4db8ff 0% 80%, #ddd 80% 100%);
+}
+
+.circle[data-value="75%"] {
+  background: conic-gradient(#4db8ff 0% 75%, #ddd 75% 100%);
+}
+
+.circle[data-value="70%"] {
+  background: conic-gradient(#4db8ff 0% 70%, #ddd 70% 100%);
+}
+
+.circle[data-value="60%"] {
+  background: conic-gradient(#4db8ff 0% 60%, #ddd 60% 100%);
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.about-hero p {
+  font-size: 1.5rem;
+}
+
+.about-hero .btn {
+  font-size: 1.25rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/* Custom styling for contact section */
+#contact {
+  background: url('images/Contact_Section.jpg') no-repeat center center/cover;
+  color: #fff;
+  padding: 50px 0;
+}
+
+#contact h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+#contact p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Form styling */
+#contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.form-group input,
+.form-group textarea {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Social links */
+#social-links {
+  margin-top: 30px;
+}
+
+#social-links h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+#social-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+#social-links ul li {
+  margin: 10px 0;
+}
+
+#social-links ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+#social-links ul li a:hover {
+  color: #007bff;
+}
